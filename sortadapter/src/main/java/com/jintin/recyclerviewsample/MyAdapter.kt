@@ -35,7 +35,6 @@ class MyAdapter : RecyclerView.Adapter<MyViewHolder>() {
 
     fun addData(item: MyData) {
         list.add(item)
-        list.replaceAll()
     }
 
     fun removeData(item: MyData) {
