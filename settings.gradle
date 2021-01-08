@@ -1,0 +1,5 @@
+include ':app'
+include ':diffutil'
+include ':listadapter'
+include ':sortadapter'
+rootProject.name = "RecyclerViewSample"
