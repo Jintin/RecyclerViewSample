@@ -7,14 +7,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.jintin.recyclerviewsample.databinding.AdapterMainBinding
 
 class MyAdapter : RecyclerView.Adapter<MyViewHolder>() {
-    //    private var list = listOf<MyData>()
-    private val list = mutableListOf<MyData>()
+    private var list = listOf<MyData>()
 
     fun setData(list: List<MyData>) {
         val callback = MyDiffUtil(this.list, list)
         val result = DiffUtil.calculateDiff(callback)
-        this.list.clear()
-        this.list.addAll(list)
+        this.list = list
         result.dispatchUpdatesTo(this)
     }
 
