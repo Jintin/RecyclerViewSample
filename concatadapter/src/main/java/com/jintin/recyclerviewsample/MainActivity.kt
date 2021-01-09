@@ -2,9 +2,12 @@ package com.jintin.recyclerviewsample
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.jintin.recyclerviewsample.databinding.ActivityMainBinding
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,7 +20,11 @@ class MainActivity : AppCompatActivity() {
         binding.recyclerView.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         binding.recyclerView.adapter = adapter
-        adapter.addAdapter(1, getAdapter(300))
+        lifecycleScope.launch {
+            delay(500)
+            adapter.addAdapter(1, getAdapter(300))
+        }
+
     }
 
     private fun getAdapter(index: Int) = MyAdapter().also {
