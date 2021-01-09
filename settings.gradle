@@ -2,4 +2,5 @@ include ':app'
 include ':diffutil'
 include ':listadapter'
 include ':sortadapter'
+include ':concatadapter'
 rootProject.name = "RecyclerViewSample"
