@@ -12,6 +12,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/concatadapter" />
             <option value="$PROJECT_DIR$/diffutil" />
             <option value="$PROJECT_DIR$/listadapter" />
             <option value="$PROJECT_DIR$/sortadapter" />
